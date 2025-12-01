@@ -1,4 +1,4 @@
-/* RESET BÁSICO */
+/* RESET BÁSICO */ 
 *,
 *::before,
 *::after {
@@ -58,8 +58,8 @@ body {
   display: flex;
   flex-direction: column;
   gap: 1.6rem;
-  position: sticky;
-  top: 0;
+  /* ANTES: position: sticky; top: 0; */
+  position: relative;  /* ✅ ya no se queda bloqueado */
   z-index: 10;
   backdrop-filter: blur(18px);
   background: linear-gradient(
@@ -543,12 +543,6 @@ body {
 }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero {
-    position: static;
-  }
-}
-
 @media (max-width: 768px) {
   .hero {
     padding-inline: 1.3rem;
